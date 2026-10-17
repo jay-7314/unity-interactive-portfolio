@@ -92,6 +92,7 @@ while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
 ## 🙋 About
 
 - **이름**: 하정우
-- **연락처**: hjh268100@gmail.com
+- **이메일**: hjh268100@gmail.com
+- **전화번호**: 010-2936-7314
 - **경력**: Unity 개발 1년 3개월 (인터랙티브 콘텐츠)
 - 경험해 본 것: Kinect, Arduino/RFID 시리얼, TCP, REST/JSON, 웹캠·마이크
