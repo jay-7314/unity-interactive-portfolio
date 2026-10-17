@@ -1,24 +1,97 @@
-# Unity Interactive Content — Code Samples
+# 🎮 Unity Interactive Content — Code Samples
 
-전시/체험형 인터랙티브 콘텐츠 16건에서 직접 작성한 Unity(C#) 스크립트를 모아 둔 저장소입니다.
-(Unity 2022.3.62f2, UGUI, TextMeshPro)
+> 센서·통신·영상이 **현장에서 멈추지 않고** 돌아가게 만든 Unity(C#) 코드 모음
+> 전시/체험형 인터랙티브 콘텐츠 16건 · Unity 2022.3 · UGUI · TextMeshPro
 
-> 영상·이미지·오디오 등 미디어 에셋, 서드파티 에셋(OpenCV+Unity, Kinect SDK 래퍼, DOTween 등), 내부 IP·키·기기 식별자는 제외/마스킹했습니다.
-> 따라서 이 저장소만으로 Unity 프로젝트가 빌드되지는 않으며, **코드 열람용**입니다.
+![Unity](https://img.shields.io/badge/Unity-2022.3-black?logo=unity) ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?logo=csharp) ![Kinect](https://img.shields.io/badge/Kinect-IR%20%2B%20Depth-0078D4) ![REST](https://img.shields.io/badge/REST-JSON-orange) ![TCP](https://img.shields.io/badge/TCP-Serial-green)
 
-| 폴더 | 핵심 기술 |
-|---|---|
-| 01-arduino-tcp-interaction | TCP 클라이언트(재접속·핸드셰이크), Arduino 시리얼(백그라운드 스레드 + 큐), JSON 설정 |
-| 02-rest-api-quiz-game | REST API 연동(타임아웃·재시도·폴링), Newtonsoft.Json, 오브젝트 풀링 |
-| 03-ai-drawing-pipeline | 그림판 텍스처 드로잉, 외부 AI API 업로드→작업→폴링→다운로드, 429 재시도, TCP 이미지 전송 |
-| 04-webcam-sound-trigger | WebCamTexture 밝기 샘플링으로 터치 감지, JSON 좌표 설정 |
-| 05-webcam-photo-composite | 웹캠 회전/반전, 합성, 타원 크롭 |
-| 06-touch-video-map | VideoPlayer 상태 관리, JSON 레이아웃, 원격 로그 전송 |
-| 07-arduino-video-quiz | 영상 상태머신 퀴즈, Arduino 입력, 유휴 타이머 |
-| 08-mic-record-playback | Microphone 녹음/재생, 영상 동기화 |
-| 09~13 | 영상 선택형 키오스크 (공통 템플릿 기반) |
-| 14-kinect-ir-tracking | Kinect IR·깊이 프레임(P/Invoke 네이티브 플러그인) 기반 위치 추적, 검출 후보 선택·평활화, JSON 좌표 체류 판정 |
-| 15-rfid-card-quiz | RFID 시리얼 입력(자동 재연결), DOTween 카드 뒤집기, 시도 횟수·유휴 타임아웃 |
-| 16-dual-display-country-select | 듀얼 디스플레이, JSON 기반 UI 배치, 국가별 현지 시각·시차 계산 |
+**이 저장소는 코드 열람용입니다.** 영상·이미지·오디오, 서드파티 에셋(OpenCV+Unity, Kinect SDK 래퍼, DOTween 등), 내부 IP·키·기기 식별자는 제외하거나 가렸습니다. 그래서 이 저장소만으로 Unity 빌드는 되지 않습니다.
 
-공통 구조: `GameManager`(싱글톤) · `JsonManager`(StreamingAssets JSON 로드) · `LoadManager`(리소스 로더) · `CoroutineData`.
+---
+
+## ✨ 대표 작업 3가지
+
+### 1. Kinect 적외선·깊이 카메라로 위치 추적 → [`14-kinect-ir-tracking`](14-kinect-ir-tracking/Assets/Scripts/)
+
+반사 스티커를 든 위치를 Kinect v2(512×424)로 찾고, **정해진 자리에 3초 머물면** 해당 영상을 재생합니다.
+
+```mermaid
+flowchart LR
+    A[Kinect IR + Depth 프레임] --> B[깊이 200~2500mm 필터]
+    B --> C[검출 4종<br/>어두운 반사 · 밝은 반사<br/>밝기 급변 · 적응형 임계값]
+    C --> D[최적 후보 선택]
+    D --> E[평활화 · 점프 제한<br/>실패 시 10프레임 유지]
+    E --> F{JSON 좌표·반경에<br/>3초 체류?}
+    F -->|예| G[영상 재생]
+```
+
+- 제공받은 네이티브 플러그인을 `DllImport`로 호출하고, `GCHandle`로 배열을 고정해 복사 없이 프레임을 받습니다.
+- 현장 조명이 바뀌어도 대응할 수 있게 검출 임계값을 인스펙터 슬라이더로 열어 두었습니다.
+
+### 2. REST API로 서버와 이어지는 2인 퀴즈 게임 → [`02-rest-api-quiz-game`](02-rest-api-quiz-game/Assets/Scripts/Common/NetworkManager.cs)
+
+서버의 방 상태(`USING`/`EMPTY`)를 폴링해 두 사용자를 연결하고, 입장·퇴장·시간·답안을 API로 기록합니다.
+
+- 요청마다 타임아웃 10초, 실패하면 5초 뒤 재시도
+- Newtonsoft.Json으로 컬럼 형태 응답을 파싱해 모델로 변환
+- 공 오브젝트 풀링, 문항·팝업 텍스트는 JSON으로 분리
+
+### 3. 외부 AI API 연동 그림 생성 → [`03-ai-drawing-pipeline`](03-ai-drawing-pipeline/Assets/Scripts/DrawingMatching.cs)
+
+관람객이 그린 그림을 AI 서비스에 보내 편집·배경 제거를 거친 결과를 화면과 네트워크로 전달합니다.
+
+```mermaid
+flowchart LR
+    A[그림 그리기<br/>Texture2D] --> B[업로드]
+    B --> C[편집 작업 생성] --> D[폴링]
+    D --> E[배경 제거 작업] --> F[폴링]
+    F --> G[다운로드] --> H[화면 표시 + TCP 전송]
+    D -. 429 .-> I[대기 후 재시도]
+```
+
+---
+
+## 🛡️ 현장에서 안 멈추게 하는 방법 (공통 설계)
+
+| 문제 | 해결 | 예시 |
+|---|---|---|
+| 통신이 중간에 끊긴다 | 자동 재접속·재시도 | TCP 2초 루프, Serial 3초 재연결, REST 5초 재시도 |
+| 입력을 읽다가 화면이 끊긴다 | 백그라운드 스레드가 읽고 큐로 넘김, 메인 스레드에서 이벤트 발생 | [`ArduinoManager.cs`](01-arduino-tcp-interaction/Assets/Scripts/Common/ArduinoManager.cs) |
+| 현장에서 문구·좌표를 바꿔야 한다 | JSON으로 분리해 재빌드 없이 수정 | 전 프로젝트 `StreamingAssets/*.json` |
+| 사람이 떠나면 화면이 남는다 | 유휴 타이머로 처음 화면 복귀 | 01, 07, 15, 16 |
+| 원격으로 상태를 알고 싶다 | HTTP 로그 전송 + 인게임 로그 뷰어 | 03, 06 |
+
+```csharp
+// 백그라운드에서 쌓은 메시지를 메인 스레드에서만 꺼내 이벤트로 전달
+while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
+```
+
+---
+
+## 📂 전체 프로젝트
+
+| # | 프로젝트 | 핵심 기술 |
+|---|---|---|
+| 01 | [arduino-tcp-interaction](01-arduino-tcp-interaction) | TCP 클라이언트(재접속·핸드셰이크), Arduino 시리얼(스레드+큐), JSON 설정 |
+| 02 | [rest-api-quiz-game](02-rest-api-quiz-game) | REST(타임아웃·재시도·폴링), Newtonsoft.Json, 오브젝트 풀링 |
+| 03 | [ai-drawing-pipeline](03-ai-drawing-pipeline) | 텍스처 드로잉, 외부 AI API 파이프라인, 429 재시도, TCP 이미지 전송 |
+| 04 | [webcam-sound-trigger](04-webcam-sound-trigger) | WebCamTexture 22개 지점 밝기로 터치 감지 |
+| 05 | [webcam-photo-composite](05-webcam-photo-composite) | 웹캠 회전·반전, 타원 크롭, 사진 합성 |
+| 06 | [touch-video-map](06-touch-video-map) | VideoPlayer 상태 관리, JSON 레이아웃, 원격 로그 |
+| 07 | [arduino-video-quiz](07-arduino-video-quiz) | 영상 상태머신 퀴즈, Arduino 입력, 유휴 타이머 |
+| 08 | [mic-record-playback](08-mic-record-playback) | Microphone 녹음·재생, 영상 동기화 |
+| 09~13 | video-select-kiosk-a~e | 영상 선택형 키오스크 5건 (공통 템플릿) |
+| 14 | [kinect-ir-tracking](14-kinect-ir-tracking) | Kinect IR·깊이, 위치 추적, 체류 판정 |
+| 15 | [rfid-card-quiz](15-rfid-card-quiz) | RFID 시리얼(자동 재연결), DOTween 카드 뒤집기 |
+| 16 | [dual-display-country-select](16-dual-display-country-select) | 듀얼 디스플레이, JSON UI 배치, 국가별 현지 시각·시차 |
+
+**공통 구조** `GameManager`(싱글톤) · `JsonManager`(StreamingAssets JSON 로드) · `LoadManager`(리소스 로더) · `CoroutineData`
+
+---
+
+## 🙋 About
+
+- **이름**: 하정우
+- **연락처**: hjh268100@gmail.com
+- **경력**: Unity 개발 1년 3개월 (인터랙티브 콘텐츠)
+- 경험해 본 것: Kinect, Arduino/RFID 시리얼, TCP, REST/JSON, 웹캠·마이크
