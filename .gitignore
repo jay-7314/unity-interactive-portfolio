@@ -1,0 +1,20 @@
+# Unity
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+UserSettings/
+*.csproj
+*.sln
+*.user
+.vs/
+.idea/
+# 비밀값/원본 미디어는 올리지 않음
+*.key
+secrets.*
+*.mp4
+*.mov
+*.wav
+*.zip

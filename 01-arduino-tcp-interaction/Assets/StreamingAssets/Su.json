@@ -1,0 +1,360 @@
+{
+  "Common": [
+    {
+        "IPAddress": "192.0.2.1",
+        "Port1": "COM7",
+        "Port2_Light": "COM11",
+        "BaudRate": 9600,
+
+        "returnTimer": 20,
+        "BackgroundImg": [
+            {
+                "path": "Image/bg.png",
+                "imgSize": {
+                    "x": 1920,
+                    "y": 1080
+                }
+            }
+        ],
+        "HomeBtn": [
+            {
+                "path": "Button/button-home.png",
+                "imgSize": {
+                    "x": 94,
+                    "y": 122
+                },
+                "imgPos": {
+                    "x": 830,
+                    "y": 430
+                }
+            }
+        ],
+
+        "TItleSentance": [
+            {
+                "path": "Image/#2_corner title.png",
+                "imgSize": {
+                    "x": 167,
+                    "y": 93
+                },
+                "imgPos": {
+                    "x": -800,
+                    "y": 450
+                }
+            }
+        ]
+    }
+  ],
+
+  "Title": [
+    {
+      "TitleBackgroundImg": [
+        {
+          "path": "Image/#2-0.png",
+          "imgSize": {
+            "x": 1920,
+            "y": 1080
+          }
+        }
+      ],
+      "titleImage": [
+        {
+          "path": "Button/button-start.png",
+          "imgSize": {
+            "x": 412,
+            "y": 105
+          },
+          "imgPos": {
+            "x": -560,
+            "y": -240
+          }
+        }
+      ]
+    }
+  ],
+
+  "Interaction": [
+    {
+      "FirstSentance": [
+        {
+          "path": "Image/#2-1_(2).png",
+          "imgSize": {
+            "x": 984,
+            "y": 183
+          },
+          "imgPos": {
+            "x": 0,
+            "y": 415
+          }
+        }
+      ],
+      "SecondVideo": [
+        {
+          "VideoPath": "Video/Interaction/2-1.webm",
+          "VideoSize": {
+            "x": 800,
+            "y": 300
+          },
+          "VideoPos": {
+            "x": 0,
+            "y": 190
+          }
+        }
+      ],
+      "LastImage": [
+        {
+          "VideoPath": "Video/Interaction/#2-1_(5).webm",
+          "VideoSize": {
+            "x": 970,
+            "y": 300
+          },
+          "VideoPos": {
+            "x": 0,
+            "y": -287.39
+          }
+        }
+      ],
+      "FirstImage": [
+        {
+            "path": "Image/#mid_pu-1.png",
+            "imgSize": {
+                "x": 845,
+                "y": 111
+            },
+            "imgPos": {
+                "x": 0,
+                "y": -40.4
+            }
+        }
+      ],
+      "SecondImage": [
+        {
+            "path": "Image/#mid_pu-2.png",
+            "imgSize": {
+                "x": 845,
+                "y": 111
+            },
+            "imgPos": {
+                "x": 0,
+                "y": -40.4
+            }
+        }
+      ],
+      "ThirdImage": [
+        {
+            "path": "Image/#mid_pu-3.png",
+            "imgSize": {
+                "x": 845,
+                "y": 111
+            },
+            "imgPos": {
+                "x": 0,
+                "y": -40.4
+            }
+        }
+      ]
+
+    }
+  ],
+
+  "VideoPage": [
+    {
+      "SkipBtn": [
+        {
+          "path": "Button/button-next.png",
+          "imgSize": {
+            "x": 84,
+            "y": 80
+          },
+          "imgPos": {
+            "x": 900,
+            "y": -470
+          }
+        }
+      ],
+      "Video": [
+        {
+          "VideoPath": "Video/Video/#2-2.mp4",
+          "VideoSize": {
+            "x": 1800,
+            "y": 750
+          },
+          "VideoPos": {
+            "x": 0,
+            "y": 0
+          }
+        }
+      ]
+    }
+  ],
+
+  "InducePage": [
+    {
+      "InducePageImg": [
+        {
+          "path": "Image/#2-3.png",
+          "imgSize": {
+            "x": 1102,
+            "y": 699
+          }
+        }
+      ],
+      "ReturnToVideoPage": [
+        {
+          "path": "Button/#2-3_(5).png",
+          "imgSize": {
+            "x": 375,
+            "y": 62
+          },
+          "imgPos": {
+            "x": -760,
+            "y": -470
+          }
+        }
+      ],
+      "GotoImagePage": [
+        {
+          "path": "Button/button-next.png",
+          "imgSize": {
+            "x": 80,
+            "y": 80
+          },
+          "imgPos": {
+            "x": 900,
+            "y": -470
+          }
+        }
+      ]
+    }
+  ],
+
+  "PicturePage": [
+    {
+      "ReturnToVideo": [
+        {
+          "path": "Button/#2-3_(5).png",
+          "imgSize": {
+            "x": 375,
+            "y": 62
+          },
+          "imgPos": {
+            "x": -760,
+            "y": -470
+          }
+        }
+      ],
+      "WorldImg": [
+        {
+          "path": "Image/#2-4.png",
+          "imgSize": {
+            "x": 1920,
+            "y": 1080
+          },
+          "imgPos": {
+            "x": 0,
+            "y": 30
+          }
+        }
+      ],
+      "Selects": [
+        {
+          "id": 0,
+          "path": "Button/#2-4_(1).png",
+          "imgSize": {
+            "x": 668,
+            "y": 417
+          },
+          "imgPos": {
+            "x": 165,
+            "y": 135
+          }
+        },
+        {
+          "id": 1,
+          "path": "Button/#2-4_(2).png",
+          "imgSize": {
+            "x": 581,
+            "y": 470
+          },
+          "imgPos": {
+            "x": -618,
+            "y": 80
+          }
+        },
+        {
+          "id": 2,
+          "path": "Button/#2-4_(3).png",
+          "imgSize": {
+            "x": 692,
+            "y": 373
+          },
+          "imgPos": {
+            "x": 150,
+            "y": -200
+          }
+        }
+      ],
+      "Select_Explain": [
+        {
+          "id": 0,
+          "path": "Button/#2-5_(1).png",
+          "imgSize": {
+            "x": 983,
+            "y": 765
+          },
+          "imgPos": {
+            "x": 320,
+            "y": -10
+          },
+          "CencelPositions": {
+            "x": 430,
+            "y": 290
+          }
+        },
+        {
+          "id": 1,
+          "path": "Button/#2-5_(2).png",
+          "imgSize": {
+            "x": 794,
+            "y": 838
+          },
+          "imgPos": {
+            "x": -80,
+            "y": -40
+          },
+          "CencelPositions": {
+            "x": 340,
+            "y": 325
+          }
+        },
+        {
+          "id": 2,
+          "path": "Button/#2-5_(3).png",
+          "imgSize": {
+            "x": 971,
+            "y": 845
+          },
+          "imgPos": {
+            "x": 290,
+            "y": -40
+          },
+          "CencelPositions": {
+            "x": 425,
+            "y": 325
+          }
+        }
+      ],
+      "Select_Cancel": [
+        {
+          "path": "Button/버튼_팝업닫기.png",
+          "imgSize": {
+            "x": 53,
+            "y": 52
+          }
+
+        }
+      ]
+    }
+  ]
+
+}

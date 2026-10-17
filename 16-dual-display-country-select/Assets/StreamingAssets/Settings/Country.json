@@ -1,0 +1,33 @@
+{
+	"countryBackgroundImg" : "UI/SelectPageBackground.png",
+	"countryLists" : [
+		{
+			"id" : "London",
+			"CountryMovie" : "CountryMovie/LondonMovie.mp4"
+		},
+		{
+			"id" : "NewYork",
+			"CountryMovie" : "CountryMovie/NewYorkMovie.mp4"
+		},
+		{
+			"id" : "Paris",
+			"CountryMovie" : "CountryMovie/ParisMovie.mp4"
+		},
+		{
+			"id" : "Cairo",
+			"CountryMovie" : "CountryMovie/CairoMovie.mp4"
+		},
+		{
+			"id" : "Sydney",
+			"CountryMovie" : "CountryMovie/SydneyMovie.mp4"
+		},
+		{
+			"id" : "Hanoi",
+			"CountryMovie" : "CountryMovie/HanoiMovie.mp4"
+		},
+		{
+			"id" : "Riopde",
+			"CountryMovie" : "CountryMovie/RiopdeMovie.mp4"
+		}
+	]
+}

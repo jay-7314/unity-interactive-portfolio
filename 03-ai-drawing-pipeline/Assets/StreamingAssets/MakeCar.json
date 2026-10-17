@@ -1,0 +1,53 @@
+{
+  "TitleImg": [
+    {
+      "path": "Image/title.png"
+    }
+  ],
+  "ExplainImgs": [
+    {
+      "id": 0,
+      "path": "Image/Explain1.png",
+      "imgSize": {
+        "x": 300,
+        "y": 300
+      },
+      "imgPos": {
+        "x": 200,
+        "y": -730
+      }
+
+    },
+    {
+      "id": 1,
+      "path": "Image/Explain2.png",
+      "imgSize": {
+        "x": 300,
+        "y": 300
+      },
+      "imgPos": {
+        "x": 550,
+        "y": -730
+      }
+    },
+    {
+      "id": 2,
+      "path": "Image/Explain3.png",
+      "imgSize": {
+        "x": 300,
+        "y": 300
+      },
+      "imgPos": {
+        "x": 900,
+        "y": -730
+      }
+    }
+  ],
+  "FinalCount": 5,
+  "IPAddress": "192.0.2.1",
+  "returnTime": 30,
+  "returnTimeforDrawing": 60,
+  "inx": 28,
+  "uid": "<REDACTED>"
+
+}

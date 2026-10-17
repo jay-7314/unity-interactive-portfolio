@@ -1,0 +1,41 @@
+{
+	"videos" : [
+		{
+			"id": "London",
+			"subVideoTarget" : "CountryVideo/Korea-London.mp4",
+			"subVideoReturn" : "CountryVideo/London-Korea.mp4"
+		},
+		{
+			"id": "NewYork",
+			"subVideoTarget" : "CountryVideo/Korea-newYork.mp4",
+			"subVideoReturn" : "CountryVideo/NewYork-Korea.mp4"
+		},
+		{
+			"id": "Paris",
+			"subVideoTarget" : "CountryVideo/Korea-Parie.mp4",
+			"subVideoReturn" : "CountryVideo/parie-korea.mp4"
+		},
+		{
+			"id": "Cairo",
+			"subVideoTarget" : "CountryVideo/Korea-Kairo.mp4",
+			"subVideoReturn" : "CountryVideo/kairo-korea.mp4"
+		},
+		{
+			"id": "Sydney",
+			"subVideoTarget" : "CountryVideo/korea-sydney.mp4",
+			"subVideoReturn" : "CountryVideo/sydney-korea.mp4"
+		},
+		{
+			"id": "Hanoi",
+			"subVideoTarget" : "CountryVideo/korea-hanoi.mp4",
+			"subVideoReturn" : "CountryVideo/Honoi-Korea.mp4"
+		},
+		{
+			"id": "Riopde",
+			"subVideoTarget" : "CountryVideo/korea-ri.mp4",
+			"subVideoReturn" : "CountryVideo/ri-korea.mp4"
+		}
+	],
+
+	"defultVideo" : "CountryVideo/Default-Korea.mp4"
+}

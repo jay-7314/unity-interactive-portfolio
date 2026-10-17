@@ -1,0 +1,94 @@
+{
+  "VideoList": [
+    {
+      "id": 0,
+      "VideoPath": "Video/1 물이 끓는 주방.mp4",
+      "videoText": "물이 끓는 주방"
+    },
+    {
+      "id": 1,
+      "VideoPath": "Video/2 구두로 걷는 모습.mp4",
+      "videoText": "구두로 걷는 모습"
+    },
+    {
+      "id": 2,
+      "VideoPath": "Video/3 말 뛰는 모습.mp4",
+      "videoText": "말 뛰는 모습"
+    },
+    {
+      "id": 3,
+      "VideoPath": "Video/4 스탠드 불 끄는 모습.mp4",
+      "videoText": "스탠드 불 끄는 모습"
+    },
+    {
+      "id": 4,
+      "VideoPath": "Video/5 컴퓨터 키보드 버튼 누르는 모습.mp4",
+      "videoText": "컴퓨터 키보드 버튼\n 누르는 모습"
+    },
+    {
+      "id": 5,
+      "VideoPath": "Video/8 포크로 그릇 위에 음식물을 자르는 모습.mp4",
+      "videoText": "포크로 그릇 위에\n 음식물을 자르는 모습"
+    },
+    {
+      "id": 6,
+      "VideoPath": "Video/9 천둥 치는 모습.mp4",
+      "videoText": "천둥 치는 모습"
+    },
+    {
+      "id": 7,
+      "VideoPath": "Video/10 눈위를 걷는 모습.mp4",
+      "videoText": "눈위를 걷는 모습"
+    },
+    {
+      "id": 8,
+      "VideoPath": "Video/11 비닐봉지안에 물건이 들어있고 흔들리는 모습.mp4",
+      "videoText": "비닐봉지안에 물건이 \n들어있고 흔들리는 모습"
+    },
+    {
+      "id": 9,
+      "VideoPath": "Video/12 도마에 칼질하는 모습.mp4",
+      "videoText": "도마에 칼질하는 모습"
+    },
+    {
+      "id": 10,
+      "VideoPath": "Video/13 나무에 도끼질 하는 모습.mp4",
+      "videoText": "나무에 도끼질 하는 모습"
+    },
+    {
+      "id": 11,
+      "VideoPath": "Video/14 버튼 누르는 모습.mp4",
+      "videoText": "버튼 누르는 모습"
+    },
+    {
+      "id": 12,
+      "VideoPath": "Video/15 비가 떨어지는 모습.mp4",
+      "videoText": "비가 떨어지는 모습"
+    },
+    {
+      "id": 13,
+      "VideoPath": "Video/16 바람이 불어 풀들이 흔들리는 모습.mp4",
+      "videoText": "바람이 불어 풀들이 \n흔들리는 모습"
+    },
+    {
+      "id": 14,
+      "VideoPath": "Video/17 큰 새가 펄럭이는 모습.mp4",
+      "videoText": "큰 새가 펄럭이는 모습"
+    },
+    {
+      "id": 15,
+      "VideoPath": "Video/18 문 똑똑 하는 모습.mp4",
+      "videoText": "문 똑똑 하는 모습"
+    }
+
+  ],
+  "SelectPageToTitleTimer": 30,
+  "FinishPageToTitleTimer": 10,
+  "ReturnToTItle": 30,
+  "Port": "COM3",
+  "OnLamp": "On",
+  "OffLamp": "Off",
+  "Lasttimer": 30
+
+
+}

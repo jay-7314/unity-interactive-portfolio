@@ -1,0 +1,33 @@
+{
+  "PortName": "COM10",
+  "BaudRate": 9600,
+  "RFIDList": [
+    {
+      "RFIDKey": "55009FE62C",
+      "RFIDValue": "진피"
+    },
+    {
+      "RFIDKey": "55009FC910",
+      "RFIDValue": "반하"
+    },
+    {
+      "RFIDKey": "5500A0A524",
+      "RFIDValue": "감초"
+    },
+    {
+      "RFIDKey": "3A0051144E",
+      "RFIDValue": "백복령"
+    },
+    {
+      "RFIDKey": "3A00513ACC",
+      "RFIDValue": "백출"
+    },
+    {
+      "RFIDKey": "3A0050F8B6",
+      "RFIDValue": "인삼"
+    }
+  ],
+  "ReturnTimer": 10,
+  "inx": 49,
+  "uid": "<REDACTED>"
+}

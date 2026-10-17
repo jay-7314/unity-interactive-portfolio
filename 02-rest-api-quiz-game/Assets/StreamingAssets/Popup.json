@@ -1,0 +1,201 @@
+{
+  "GameFirstCount": 2,
+  "Title": [
+    {
+      "Title_Txt": [
+        {
+          "KorSentance": "두 사람 모두 태그하면, 체험이 시작됩니다.",
+          "EngSentance": "영어가 들어갈 자리입니다.",
+          "JapSentance": "일본어가 들어갈 자리입니다."
+        }
+
+      ]
+    }
+  ],
+
+  "Explain": [
+    {
+      "MindPiece_Txt": [
+        {
+          "KorSentance": "체험 후 최대 5개의 마음 조각을 받을 수 있습니다.",
+          "EngSentance": "영어_마음조각(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_마음조각(이)가 들어갈 자리입니다."
+        }
+      ]
+    }
+  ],
+
+  "PersonCheck": [
+    {
+      "PersonalCircle": [
+        {
+          "BlueImage": "CircleImage/Blue.png",
+          "GreenImage": "CircleImage/Green.png",
+          "OrangeImage": "CircleImage/Orange.png",
+          "PinkImage": "CircleImage/Pink.png",
+          "RedImage": "CircleImage/Red.png",
+          "YellowImage": "CircleImage/Yellow.png"
+        }
+      ],
+      "PersonCheckText": [
+        {
+          "KorSentance": "각자의 자리에 서서 \nYes버튼을 누르면, 시작됩니다.",
+          "EngSentance": "영어_사람확인(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_사람확인(이)가 들어갈 자리입니다."
+        }
+      ],
+      "PersonelSiteText": [
+        {
+          "KorSentance": "님 자리",
+          "EngSentance": "영어_사람자리(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_사람자리(이)가 들어갈 자리입니다."
+        }
+      ]
+    }
+  ],
+
+  "BallPractice": [
+    {
+      "BallText": [
+        {
+          "KorSentance": "이 공간에서는 우리의 시야를 방해하는 컬러볼을 터트려볼 겁니다.",
+          "EngSentance": "영어_컬러볼(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_컬러볼(이)가 들어갈 자리입니다."
+        }
+      ]
+    }
+  ],
+
+  "Practice_Page_First": [
+    {
+      "FirstTxt": [
+        {
+          "KorSentance": "컬러볼 글자에 칠해진 \n컬러의 버튼을 눌러야 합니다.",
+          "EngSentance": "영어_컬러볼 문구_첫번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_컬러볼 문구_첫번째(이)가 들어갈 자리입니다."
+        }
+      ],
+      "SecondTxt": [
+        {
+          "KorSentance": "글자의 컬러가 파란색이면 파란 버튼을 눌러주세요.",
+          "EngSentance": "영어_컬러볼 문구_두번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_컬러볼 문구_두번째(이)가 들어갈 자리입니다."
+        }
+      ],
+      "ThirdTxt": [
+        {
+          "KorSentance": "연습해 볼까요?",
+          "EngSentance": "영어_컬러볼 문구_세번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_컬러볼 문구_세번째(이)가 들어갈 자리입니다."
+        }
+      ]
+    }
+  ],
+
+  "Tutorial_First_Text": [
+    {
+      "Tutorial_first_Txt": [
+        {
+          "KorSentance": "컬러볼이 화면에서 사라지기 전에 \n 글자와 같은 컬러 버튼을 눌러주세요.",
+          "EngSentance": "영어_튜토리얼 첫번째 문구(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_튜토리얼 첫번째 문구(이)가 들어갈 자리입니다."
+        }
+      ],
+      "ImageSC": [
+        {
+          "SmallBlueImage": "CircleImage/SmallBlue.png",
+          "SmallGreenImage": "CircleImage/SmallGreen.png",
+          "SmallOrangeImage": "CircleImage/SmallOrange.png",
+          "SmallPinkImage": "CircleImage/SmallPink.png",
+          "SmallRedImage": "CircleImage/SmallRed.png",
+          "SmallYellowImage": "CircleImage/SmallYellow.png"
+        }
+      ],
+      "NamePrep": [
+        {
+          "KorSentance": "님",
+          "EngSentance": "영어_이름 전치사(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_이름 전치사(이)가 들어갈 자리입니다."
+        }
+      ]
+    }
+  ],
+  "Tutorial_Second_Text": [
+    {
+      "Tutorial_Second_Txt": [
+        {
+          "KorSentance": "이번에는 나타난 순서대로 \n 터뜨려야 합니다.",
+          "EngSentance": "영어_튜토리얼 두번째 문구(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_튜토리얼 두번째 문구(이)가 들어갈 자리입니다."
+        }
+      ],
+      "Finish_Tutorial_Txt": [
+        {
+          "KorSentance": "잘 하셨어요.",
+          "EngSentance": "영어_튜토리얼 마지막 문구(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_튜토리얼 마지막 문구(이)가 들어갈 자리입니다."
+        }
+      ]
+    }
+  ],
+  "StartGame_Texts": [
+    {
+      "SG_text1": [
+        {
+          "KorSentance": "컬러볼 8개를 터트리면 질문 1개가 나오고, \n 총 20개의 질문에 답해야 합니다.",
+          "EngSentance": "영어_게임시작전 문구_첫번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_게임시작전 문구_첫번째(이)가 들어갈 자리입니다."
+        }
+      ],
+      "SG_text2": [
+        {
+          "KorSentance": "각 질문의 보기에 따라 답변해 주세요.",
+          "EngSentance": "영어_게임시작전 문구_두번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_게임시작전 문구_두번째(이)가 들어갈 자리입니다."
+        }
+      ],
+      "SG_text3": [
+        {
+          "KorSentance": "시작해 볼까요?",
+          "EngSentance": "영어_게임시작전 문구_세번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_게임시작전 문구_세번째(이)가 들어갈 자리입니다."
+        }
+      ],
+      "SG_text4": [
+        {
+          "KorSentance": "STEP.1 \n 컬러볼 터트리기",
+          "EngSentance": "영어_게임시작전 문구_세번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_게임시작전 문구_세번째(이)가 들어갈 자리입니다."
+        }
+      ]
+    }
+  ],
+  "Second_Texts": [
+    {
+      "Second_Text1": [
+        {
+          "KorSentance": "STEP.2 \n '우리' 함께 터트리기",
+          "EngSentance": "영어_두번째게임시작전 문구_첫번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_두번째게임시작전 문구_첫번째(이)가 들어갈 자리입니다."
+        }
+      ],
+      "Second_Text2": [
+        {
+          "KorSentance": "우리의 시야를 방해하는 컬러볼을 \n 함께 터트려볼거에요.",
+          "EngSentance": "영어_두번째게임시작전 문구_두번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_두번째게임시작전 문구_두번째(이)가 들어갈 자리입니다."
+        }
+      ],
+      "Second_Text3": [
+        {
+          "KorSentance": "60초 동안 60개를 터트리면, \n 마음 조각 5개를 획득합니다.",
+          "EngSentance": "영어_두번째게임시작전 문구_세번째(이)가 들어갈 자리입니다.",
+          "JapSentance": "일본어_두번째게임시작전 문구_세번째(이)가 들어갈 자리입니다."
+        }
+      ]
+    }
+  ]
+
+
+
+}

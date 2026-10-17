@@ -1,0 +1,39 @@
+{
+    "VideoList": [
+        {
+            "id": 0,
+            "VideoPath": "Video/1 물이 끓는 주방.mp4"
+        },
+        {
+            "id": 1,
+            "VideoPath": "Video/3 말 뛰는 모습.mp4"
+        },
+        {
+            "id": 2,
+            "VideoPath": "Video/9 천둥 치는 모습.mp4"
+        },
+        {
+            "id": 3,
+            "VideoPath": "Video/10 눈위를 걷는 모습.mp4"
+        },
+        {
+            "id": 4,
+            "VideoPath": "Video/11 비닐봉지안에 물건이 들어있고 흔들리는 모습.mp4"
+        },
+        {
+            "id": 5,
+            "VideoPath": "Video/15 비가 떨어지는 모습.mp4"
+        },
+        {
+            "id": 6,
+            "VideoPath": "Video/16 바람이 불어 풀들이 흔들리는 모습.mp4"
+        },
+        {
+            "id": 7,
+            "VideoPath": "Video/17 큰 새가 펄럭이는 모습.mp4"
+        }
+    ],
+    "SelectPageToTitleTimer": 30,
+    "FinishPageToTitleTimer": 10,
+    "ReturnToTitle" :  60
+}

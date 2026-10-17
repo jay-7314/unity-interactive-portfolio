@@ -1,0 +1,14 @@
+{
+	"mainBackground" : "UI/sky.png",
+	"textList" : [
+		{
+			"mainTextstring" : "대구에서 서울까지 시차체험",
+			"mainTextSize" : 56
+		}
+	],
+	"titleCenter" : "UI/centerCircle.png",
+	"startBtnImg" : "UI/button1.png",
+	"startBtnAudio" : "Sound/StartSound.mp3",
+	"titleMessagePos" : {"x" : 160, "y": -400},
+	"startBtnPos" : {"x" : 400, "y" : -600}
+}

@@ -1,0 +1,32 @@
+{
+    "checkPosTimer": 3,
+    "pos": [
+        {
+            "stickerName": "stickerPos1",
+            "stickerRadius": 10,
+            "video": "Video1.mp4",
+            "stickerposition": {
+                "x": 225,
+                "y": 255
+            }
+        },
+        {
+            "stickerName": "stickerPos2",
+            "stickerRadius": 10,
+            "video": "Video2.mp4",
+            "stickerposition": {
+                "x": 235,
+                "y": 255
+            }
+        },
+        {
+            "stickerName": "stickerPos3",
+            "stickerRadius": 10,
+            "video": "Video3.mp4",
+            "stickerposition": {
+                "x": 255,
+                "y": 255
+            }
+        }
+    ]
+}

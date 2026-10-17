@@ -1,0 +1,39 @@
+{
+    "VideoList": [
+        {
+            "id": 0,
+            "VideoPath": "Video/2 구두로 걷는 모습.mp4"
+        },
+        {
+            "id": 1,
+            "VideoPath": "Video/4 스탠드 불 끄는 모습.mp4"
+        },
+        {
+            "id": 2,
+            "VideoPath": "Video/5 컴퓨터 키보드 버튼 누르는 모습.mp4"
+        },
+        {
+            "id": 3,
+            "VideoPath": "Video/8 포크로 그릇 위에 음식물을 자르는 모습.mp4"
+        },
+        {
+            "id": 4,
+            "VideoPath": "Video/12 도마에 칼질하는 모습.mp4"
+        },
+        {
+            "id": 5,
+            "VideoPath": "Video/13 나무에 도끼질 하는 모습.mp4"
+        },
+        {
+            "id": 6,
+            "VideoPath": "Video/14 버튼 누르는 모습.mp4"
+        },
+        {
+            "id": 7,
+            "VideoPath": "Video/18 문 똑똑 하는 모습.mp4"
+        }
+    ],
+    "SelectPageToTitleTimer": 30,
+    "FinishPageToTitleTimer": 10,
+    "ReturnToTitle" :  60
+}

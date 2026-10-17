@@ -1,0 +1,74 @@
+{
+	"site" : [
+		{
+			"messageSite" : {"x" : 410, "y" : -65},
+			"messageSiteBackImage" : "UI/MessageBackground.png",
+			"messageSiteSize" : {"x" : 1120, "y" : 100},
+			"messageString" : "시차를 알아보고 싶은 나라의 도시를 선택해주세요",
+			"messageFontSize" : 36
+		}
+	],
+	"line" : {
+		"ReturnTimer" : 10,
+		"maxPerRow" : 5,
+	"Upline" :{
+		"spacing" : 400,
+		"rowY" : 100,
+		"padding" : {"x": 300, "y" : -330},
+		"items" : [
+			{
+				"id" : "London", 
+				"picture" : "CountryPicture/London.png",
+				"btn":"UI/button2.png",
+				"btnSound" : "Sound/SelectSound.mp3"
+			},
+			{
+				"id" : "NewYork",
+				"picture" : "CountryPicture/NewYork.png",
+				"btn":"UI/button2.png",
+				"btnSound" : "Sound/SelectSound.mp3"
+			},
+			{
+				"id" : "Paris",
+				"picture" : "CountryPicture/Paris.png",
+				"btn":"UI/button2.png",
+				"btnSound" : "Sound/SelectSound.mp3"
+			},
+			{
+				"id" : "Cairo",
+				"picture" : "CountryPicture/Cairo.png",
+				"btn":"UI/button2.png",
+				"btnSound" : "Sound/SelectSound.mp3"
+			}
+		]
+	},
+	"Downline" :{
+		"spacing" : 400,
+		"rowY" : 100,
+		"padding" : {"x": 450, "y" : -700},
+		"items" : [
+			{
+				"id" : "Sydney",
+				"picture" : "CountryPicture/Sydney.png",
+				"btn":"UI/button2.png",
+				"btnSound" : "Sound/SelectSound.mp3"
+			},
+			{
+				"id" : "Hanoi",
+				"picture" : "CountryPicture/Hanoi.png",
+				"btn":"UI/button2.png",
+				"btnSound" : "Sound/SelectSound.mp3"
+			},
+			{
+				"id" : "Riopde",
+				"picture" : "CountryPicture/Riode.png",
+				"btn":"UI/button2.png",
+				"btnSound" : "Sound/SelectSound.mp3"
+			}
+		]
+	}
+	}
+	
+	
+	
+}

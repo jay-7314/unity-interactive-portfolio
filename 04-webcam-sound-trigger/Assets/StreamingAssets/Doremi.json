@@ -1,0 +1,158 @@
+{
+  "Position": [
+    {
+      "Pos": {
+        "x": 540,
+        "y": -200
+      },
+      "Sound": "Sound/A4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1424,
+        "y": -200
+      },
+      "Sound": "Sound/B4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1113,
+        "y": -180
+      },
+      "Sound": "Sound/C4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 841,
+        "y": -180
+      },
+      "Sound": "Sound/C5_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1249,
+        "y": -316
+      },
+      "Sound": "Sound/D4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 950,
+        "y": -316
+      },
+      "Sound": "Sound/E4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 720,
+        "y": -316
+      },
+      "Sound": "Sound/F4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1404,
+        "y": -400
+      },
+      "Sound": "Sound/G4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 520,
+        "y": -400
+      },
+      "Sound": "Sound/ASharp4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 680,
+        "y": -488
+      },
+      "Sound": "Sound/CSharp4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 950,
+        "y": -530
+      },
+      "Sound": "Sound/DSharp4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1060,
+        "y": -847
+      },
+      "Sound": "Sound/FSharp4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1249,
+        "y": -530
+      },
+      "Sound": "Sound/GSharp4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 540,
+        "y": -600
+      },
+      "Sound": "Sound/E4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 540,
+        "y": -827
+      },
+      "Sound": "Sound/F4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1404,
+        "y": -650
+      },
+      "Sound": "Sound/G4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 660,
+        "y": -700
+      },
+      "Sound": "Sound/F4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1384,
+        "y": -847
+      },
+      "Sound": "Sound/G4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1229,
+        "y": -766
+      },
+      "Sound": "Sound/ASharp4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 1060,
+        "y": -650
+      },
+      "Sound": "Sound/CSharp4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 930,
+        "y": -746
+      },
+      "Sound": "Sound/DSharp4_[cut_1sec].mp3"
+    },
+    {
+      "Pos": {
+        "x": 789,
+        "y": -847
+      },
+      "Sound": "Sound/FSharp4_[cut_1sec].mp3"
+    }
+  ]
+}
