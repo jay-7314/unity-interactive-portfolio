@@ -91,19 +91,19 @@ while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
 
 | # | 프로젝트 | 핵심 기술 |
 |---|---|---|
-| 01 | [arduino-tcp-interaction](01-아두이노-TCP-인터랙션) | TCP 클라이언트(재접속·핸드셰이크), Arduino 시리얼(스레드+큐), JSON 설정 |
-| 02 | [rest-api-quiz-game](02-REST-API-퀴즈게임) | REST(타임아웃·재시도·폴링), Newtonsoft.Json, 오브젝트 풀링 |
-| 03 | [ai-drawing-pipeline](03-AI-그림-파이프라인) | 텍스처 드로잉, 외부 AI API 파이프라인, 429 재시도, TCP 이미지 전송 |
-| 04 | [webcam-sound-trigger](04-웹캠-사운드-트리거) | WebCamTexture 22개 지점 밝기로 터치 감지 |
-| 05 | [webcam-photo-composite](05-웹캠-사진-합성) | 웹캠 회전·반전, 타원 크롭, 사진 합성 |
-| 06 | [touch-video-map](06-터치-영상-지도) | VideoPlayer 상태 관리, JSON 레이아웃, 원격 로그 |
-| 07 | [arduino-video-quiz](07-아두이노-영상-퀴즈) | 영상 상태머신 퀴즈, Arduino 입력, 유휴 타이머 |
-| 08 | [mic-record-playback](08-마이크-녹음-재생) | Microphone 녹음·재생, 영상 동기화 |
-| 09~13 | video-select-kiosk-a~e | 영상 선택형 키오스크 5건 (공통 템플릿) |
-| 14 | [kinect-ir-tracking](14-키넥트-IR-추적) | Kinect IR·깊이, 위치 추적, 체류 판정 |
-| 15 | [rfid-card-quiz](15-RFID-카드-퀴즈) | RFID 시리얼(자동 재연결), DOTween 카드 뒤집기 |
-| 16 | [dual-display-country-select](16-듀얼디스플레이-국가선택) | 듀얼 디스플레이, JSON UI 배치, 국가별 현지 시각·시차 |
-| 17 | [lidar-human-pointer](17-라이다-사람-포인터) | LiDAR 사람 인식 → 화면 포인터 (스레드 분리, 클러스터링, 추적 유지) |
+| 01 | [아두이노 TCP 인터랙션](01-아두이노-TCP-인터랙션) | TCP 클라이언트(재접속·핸드셰이크), Arduino 시리얼(스레드+큐), JSON 설정 |
+| 02 | [REST API 퀴즈게임](02-REST-API-퀴즈게임) | REST(타임아웃·재시도·폴링), Newtonsoft.Json, 오브젝트 풀링 |
+| 03 | [AI 그림 파이프라인](03-AI-그림-파이프라인) | 텍스처 드로잉, 외부 AI API 파이프라인, 429 재시도, TCP 이미지 전송 |
+| 04 | [웹캠 사운드 트리거](04-웹캠-사운드-트리거) | WebCamTexture 22개 지점 밝기로 터치 감지 |
+| 05 | [웹캠 사진 합성](05-웹캠-사진-합성) | 웹캠 회전·반전, 타원 크롭, 사진 합성 |
+| 06 | [터치 영상 지도](06-터치-영상-지도) | VideoPlayer 상태 관리, JSON 레이아웃, 원격 로그 |
+| 07 | [아두이노 영상 퀴즈](07-아두이노-영상-퀴즈) | 영상 상태머신 퀴즈, Arduino 입력, 유휴 타이머 |
+| 08 | [마이크 녹음 재생](08-마이크-녹음-재생) | Microphone 녹음·재생, 영상 동기화 |
+| 09~13 | 영상선택 키오스크 A~E | 영상 선택형 키오스크 5건 (공통 템플릿) |
+| 14 | [키넥트 IR 추적](14-키넥트-IR-추적) | Kinect IR·깊이, 위치 추적, 체류 판정 |
+| 15 | [RFID 카드 퀴즈](15-RFID-카드-퀴즈) | RFID 시리얼(자동 재연결), DOTween 카드 뒤집기 |
+| 16 | [듀얼디스플레이 국가선택](16-듀얼디스플레이-국가선택) | 듀얼 디스플레이, JSON UI 배치, 국가별 현지 시각·시차 |
+| 17 | [라이다 사람 포인터](17-라이다-사람-포인터) | LiDAR 사람 인식 → 화면 포인터 (스레드 분리, 클러스터링, 추적 유지) |
 
 **공통 구조** `GameManager`(싱글톤) · `JsonManager`(StreamingAssets JSON 로드) · `LoadManager`(리소스 로더) · `CoroutineData`
 
