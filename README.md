@@ -1,13 +1,43 @@
-# 🎮 Unity Interactive Content — Code Samples
+# 🧑‍💻 하정우 포트폴리오 — Unity 인터랙티브 · 컴퓨터 비전 · Unity와 AI
 
-> 센서·통신·영상이 **현장에서 멈추지 않고** 돌아가게 만든 Unity(C#) 코드 모음
-> 전시/체험형 인터랙티브 콘텐츠 16건 · Unity 2022.3 · UGUI · TextMeshPro
+> 센서·통신·영상이 **현장에서 멈추지 않게** 만드는 Unity 개발자입니다.
+> 센서 입력부터 AI 모델 추론까지, 하나의 시스템으로 연결하는 일을 합니다.
 
-![Unity](https://img.shields.io/badge/Unity-2022.3-black?logo=unity) ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?logo=csharp) ![Kinect](https://img.shields.io/badge/Kinect-IR%20%2B%20Depth-0078D4) ![REST](https://img.shields.io/badge/REST-JSON-orange) ![TCP](https://img.shields.io/badge/TCP-Serial-green) ![LiDAR](https://img.shields.io/badge/LiDAR-2D%20Scan-red)
-
-**이 저장소는 코드 열람용입니다.** 영상·이미지·오디오, 서드파티 에셋(OpenCV+Unity, Kinect SDK 래퍼, DOTween 등), 내부 IP·키·기기 식별자는 제외하거나 가렸습니다. 그래서 이 저장소만으로 Unity 빌드는 되지 않습니다.
+![Unity](https://img.shields.io/badge/Unity-2022.3%20%7C%206-black?logo=unity) ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?logo=csharp) ![YOLO](https://img.shields.io/badge/YOLO-Ultralytics-00FFFF?logo=yolo&logoColor=black) ![Python](https://img.shields.io/badge/Python-YOLO%20%7C%20OpenCV-3776AB?logo=python&logoColor=white) ![Kinect](https://img.shields.io/badge/Kinect-IR%20%2B%20Depth-0078D4) ![LiDAR](https://img.shields.io/badge/LiDAR-2D%20Scan-red) ![REST](https://img.shields.io/badge/REST-JSON-orange) ![TCP](https://img.shields.io/badge/TCP-Serial-green)
 
 ---
+
+## 🗂️ 한눈에 보기
+
+| 분류 | 프로젝트 | 핵심 | 보기 |
+|---|---|---|---|
+| **Unity 인터랙티브** | 17. 라이다 사람 포인터 | LiDAR 스캔으로 사람 위치를 찾아 화면 포인터로 변환 | [17-라이다-사람-포인터](17-라이다-사람-포인터) |
+| **Unity 인터랙티브** | 전시·체험 콘텐츠 17건 | Kinect·LiDAR·Arduino 센서, TCP·REST 연동, 끊겨도 멈추지 않는 구조 | 이 저장소 [01~17 폴더](#-전체-프로젝트) · [대표 작업](#-대표-작업-4가지) |
+| **컴퓨터 비전 (ML)** | 자동차 번호판 인식 | YOLOv8n 직접 학습(테스트 mAP50 0.871), EasyOCR, 형식 검증·다수결 | [python_numberPlate](https://github.com/jay-7314/python_numberPlate) |
+| **컴퓨터 비전 (ML)** | 사람 통과 인원 집계 | YOLO 탐지·추적, 기준선 통과 방향별 In/Out 집계 | [python_TrackPeople](https://github.com/jay-7314/python_TrackPeople) |
+| **Unity와 AI** | Unity YOLO 사람 포인터 | ONNX 모델을 Unity에서 직접 추론, 추론 6.4ms · 인식 31회/초 | [unity-yolo-person-pointer](https://github.com/jay-7314/unity-yolo-person-pointer) |
+
+## 🧭 프로젝트들이 이어지는 흐름
+
+```mermaid
+flowchart LR
+    A[Unity 인터랙티브 17건<br/>센서·통신·안정성] --> B[LiDAR 사람 포인터<br/>센서로 사람 위치 입력]
+    B --> C[Unity YOLO 사람 포인터<br/>카메라와 AI로 입력 교체]
+    D[번호판 인식<br/>Python으로 모델 학습] --> E[사람 통과 집계<br/>탐지·추적·집계 로직]
+    E --> C
+    D -. 계획 .-> F[직접 학습한 모델을<br/>Unity에서 추론]
+    C -.-> F
+```
+
+센서로 하던 사람 인식을 카메라와 AI 모델로 바꿔 가며, **Unity 현장 구현 + 비전/ML + 둘을 잇는 배포**까지 범위를 넓히고 있습니다.
+진행 상황은 [진행기록](진행기록.md)에 날짜별로 남깁니다.
+
+---
+
+## 🎮 Unity 인터랙티브 콘텐츠 (이 저장소의 01~17 폴더)
+
+**이 저장소의 Unity 코드는 열람용입니다.** 영상·이미지·오디오, 서드파티 에셋(OpenCV+Unity, Kinect SDK 래퍼, DOTween 등), 내부 IP·키·기기 식별자는 제외하거나 가렸습니다. 그래서 이 저장소만으로 Unity 빌드는 되지 않습니다.
+전시/체험형 인터랙티브 콘텐츠 17건이며, 그중 영상 선택형 키오스크 5건(09~13)은 같은 템플릿 기반입니다.
 
 ## ✨ 대표 작업 4가지
 
@@ -109,10 +139,21 @@ while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
 
 ---
 
+---
+
+## 🚧 진행 중 / 다음 계획
+
+- [x] Unity 인터랙티브 콘텐츠 17건 코드 정리
+- [x] 컴퓨터 비전 2건 (번호판 인식, 사람 통과 집계)
+- [x] Unity에서 YOLO 모델 직접 추론 (사람 포인터)
+- [ ] 직접 학습한 번호판 모델을 Unity에서 추론
+- [ ] 사람 통과 집계의 정확도 측정 (직접 센 정답과 비교)
+- [ ] 번호판 OCR 읽기 정확도 측정
+- [ ] 프로젝트별 시연 영상 추가
+
 ## 🙋 About
 
 - **이름**: 하정우
 - **이메일**: hjh268100@gmail.com
 - **전화번호**: 010-2936-7314
 - **경력**: Unity 개발 1년 3개월 (인터랙티브 콘텐츠)
-- 경험해 본 것: Kinect, Arduino/RFID 시리얼, TCP, REST/JSON, 웹캠·마이크
