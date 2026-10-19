@@ -1,0 +1,9 @@
+{
+  "Commons": [
+    {
+      "PortName": "COM5",
+      "minRange": 0.3,
+      "maxRange" :  1.5
+    }
+  ]
+}

@@ -11,7 +11,7 @@
 
 ## ✨ 대표 작업 3가지
 
-### 1. Kinect 적외선·깊이 카메라로 위치 추적 → [`14-kinect-ir-tracking`](14-kinect-ir-tracking/Assets/Scripts/)
+### 1. Kinect 적외선·깊이 카메라로 위치 추적 → [`14-키넥트-IR-추적`](14-키넥트-IR-추적/Assets/Scripts/)
 
 반사 스티커를 든 위치를 Kinect v2(512×424)로 찾고, **정해진 자리에 3초 머물면** 해당 영상을 재생합니다.
 
@@ -28,7 +28,7 @@ flowchart LR
 - 제공받은 네이티브 플러그인을 `DllImport`로 호출하고, `GCHandle`로 배열을 고정해 복사 없이 프레임을 받습니다.
 - 현장 조명이 바뀌어도 대응할 수 있게 검출 임계값을 인스펙터 슬라이더로 열어 두었습니다.
 
-### 2. REST API로 서버와 이어지는 2인 퀴즈 게임 → [`02-rest-api-quiz-game`](02-rest-api-quiz-game/Assets/Scripts/Common/NetworkManager.cs)
+### 2. REST API로 서버와 이어지는 2인 퀴즈 게임 → [`02-REST-API-퀴즈게임`](02-REST-API-퀴즈게임/Assets/Scripts/Common/NetworkManager.cs)
 
 서버의 방 상태(`USING`/`EMPTY`)를 폴링해 두 사용자를 연결하고, 입장·퇴장·시간·답안을 API로 기록합니다.
 
@@ -36,7 +36,7 @@ flowchart LR
 - Newtonsoft.Json으로 컬럼 형태 응답을 파싱해 모델로 변환
 - 공 오브젝트 풀링, 문항·팝업 텍스트는 JSON으로 분리
 
-### 3. 외부 AI API 연동 그림 생성 → [`03-ai-drawing-pipeline`](03-ai-drawing-pipeline/Assets/Scripts/DrawingMatching.cs)
+### 3. 외부 AI API 연동 그림 생성 → [`03-AI-그림-파이프라인`](03-AI-그림-파이프라인/Assets/Scripts/DrawingMatching.cs)
 
 관람객이 그린 그림을 AI 서비스에 보내 편집·배경 제거를 거친 결과를 화면과 네트워크로 전달합니다.
 
@@ -56,7 +56,7 @@ flowchart LR
 | 문제 | 해결 | 예시 |
 |---|---|---|
 | 통신이 중간에 끊긴다 | 자동 재접속·재시도 | TCP 2초 루프, Serial 3초 재연결, REST 5초 재시도 |
-| 입력을 읽다가 화면이 끊긴다 | 백그라운드 스레드가 읽고 큐로 넘김, 메인 스레드에서 이벤트 발생 | [`ArduinoManager.cs`](01-arduino-tcp-interaction/Assets/Scripts/Common/ArduinoManager.cs) |
+| 입력을 읽다가 화면이 끊긴다 | 백그라운드 스레드가 읽고 큐로 넘김, 메인 스레드에서 이벤트 발생 | [`ArduinoManager.cs`](01-아두이노-TCP-인터랙션/Assets/Scripts/Common/ArduinoManager.cs) |
 | 현장에서 문구·좌표를 바꿔야 한다 | JSON으로 분리해 재빌드 없이 수정 | 전 프로젝트 `StreamingAssets/*.json` |
 | 사람이 떠나면 화면이 남는다 | 유휴 타이머로 처음 화면 복귀 | 01, 07, 15, 16 |
 | 원격으로 상태를 알고 싶다 | HTTP 로그 전송 + 인게임 로그 뷰어 | 03, 06 |
@@ -72,18 +72,19 @@ while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
 
 | # | 프로젝트 | 핵심 기술 |
 |---|---|---|
-| 01 | [arduino-tcp-interaction](01-arduino-tcp-interaction) | TCP 클라이언트(재접속·핸드셰이크), Arduino 시리얼(스레드+큐), JSON 설정 |
-| 02 | [rest-api-quiz-game](02-rest-api-quiz-game) | REST(타임아웃·재시도·폴링), Newtonsoft.Json, 오브젝트 풀링 |
-| 03 | [ai-drawing-pipeline](03-ai-drawing-pipeline) | 텍스처 드로잉, 외부 AI API 파이프라인, 429 재시도, TCP 이미지 전송 |
-| 04 | [webcam-sound-trigger](04-webcam-sound-trigger) | WebCamTexture 22개 지점 밝기로 터치 감지 |
-| 05 | [webcam-photo-composite](05-webcam-photo-composite) | 웹캠 회전·반전, 타원 크롭, 사진 합성 |
-| 06 | [touch-video-map](06-touch-video-map) | VideoPlayer 상태 관리, JSON 레이아웃, 원격 로그 |
-| 07 | [arduino-video-quiz](07-arduino-video-quiz) | 영상 상태머신 퀴즈, Arduino 입력, 유휴 타이머 |
-| 08 | [mic-record-playback](08-mic-record-playback) | Microphone 녹음·재생, 영상 동기화 |
+| 01 | [arduino-tcp-interaction](01-아두이노-TCP-인터랙션) | TCP 클라이언트(재접속·핸드셰이크), Arduino 시리얼(스레드+큐), JSON 설정 |
+| 02 | [rest-api-quiz-game](02-REST-API-퀴즈게임) | REST(타임아웃·재시도·폴링), Newtonsoft.Json, 오브젝트 풀링 |
+| 03 | [ai-drawing-pipeline](03-AI-그림-파이프라인) | 텍스처 드로잉, 외부 AI API 파이프라인, 429 재시도, TCP 이미지 전송 |
+| 04 | [webcam-sound-trigger](04-웹캠-사운드-트리거) | WebCamTexture 22개 지점 밝기로 터치 감지 |
+| 05 | [webcam-photo-composite](05-웹캠-사진-합성) | 웹캠 회전·반전, 타원 크롭, 사진 합성 |
+| 06 | [touch-video-map](06-터치-영상-지도) | VideoPlayer 상태 관리, JSON 레이아웃, 원격 로그 |
+| 07 | [arduino-video-quiz](07-아두이노-영상-퀴즈) | 영상 상태머신 퀴즈, Arduino 입력, 유휴 타이머 |
+| 08 | [mic-record-playback](08-마이크-녹음-재생) | Microphone 녹음·재생, 영상 동기화 |
 | 09~13 | video-select-kiosk-a~e | 영상 선택형 키오스크 5건 (공통 템플릿) |
-| 14 | [kinect-ir-tracking](14-kinect-ir-tracking) | Kinect IR·깊이, 위치 추적, 체류 판정 |
-| 15 | [rfid-card-quiz](15-rfid-card-quiz) | RFID 시리얼(자동 재연결), DOTween 카드 뒤집기 |
-| 16 | [dual-display-country-select](16-dual-display-country-select) | 듀얼 디스플레이, JSON UI 배치, 국가별 현지 시각·시차 |
+| 14 | [kinect-ir-tracking](14-키넥트-IR-추적) | Kinect IR·깊이, 위치 추적, 체류 판정 |
+| 15 | [rfid-card-quiz](15-RFID-카드-퀴즈) | RFID 시리얼(자동 재연결), DOTween 카드 뒤집기 |
+| 16 | [dual-display-country-select](16-듀얼디스플레이-국가선택) | 듀얼 디스플레이, JSON UI 배치, 국가별 현지 시각·시차 |
+| 17 | [lidar-human-pointer](17-라이다-사람-포인터) | LiDAR 사람 인식 → 화면 포인터 (스레드 분리, 클러스터링, 추적 유지) |
 
 **공통 구조** `GameManager`(싱글톤) · `JsonManager`(StreamingAssets JSON 로드) · `LoadManager`(리소스 로더) · `CoroutineData`
 
