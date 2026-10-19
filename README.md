@@ -141,15 +141,6 @@ while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
 
 ---
 
-## 🚧 진행 중 / 다음 계획
-
-- [x] Unity 인터랙티브 콘텐츠 17건 코드 정리
-- [x] 컴퓨터 비전 2건 (번호판 인식, 사람 통과 집계)
-- [x] Unity에서 YOLO 모델 직접 추론 (사람 포인터)
-- [ ] 직접 학습한 번호판 모델을 Unity에서 추론
-- [ ] 사람 통과 집계의 정확도 측정 (직접 센 정답과 비교)
-- [ ] 번호판 OCR 읽기 정확도 측정
-- [ ] 프로젝트별 시연 영상 추가
 
 ## 🙋 About
 
