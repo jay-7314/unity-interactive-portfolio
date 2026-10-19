@@ -16,6 +16,7 @@
 | **컴퓨터 비전 (ML)** | 자동차 번호판 인식 | YOLOv8n 직접 학습(테스트 mAP50 0.871), EasyOCR, 형식 검증·다수결 | [python_numberPlate](https://github.com/jay-7314/python_numberPlate) |
 | **컴퓨터 비전 (ML)** | 사람 통과 인원 집계 | YOLO 탐지·추적, 기준선 통과 방향별 In/Out 집계 | [python_TrackPeople](https://github.com/jay-7314/python_TrackPeople) |
 | **Unity와 AI** | Unity YOLO 사람 포인터 | ONNX 모델을 Unity에서 직접 추론, 추론 6.4ms · 인식 31회/초 | [unity-yolo-person-pointer](https://github.com/jay-7314/unity-yolo-person-pointer) |
+| **Unity와 AI** | Unity 번호판 인식 파이프라인 | Unity에서 번호판 탐지 → TCP로 Python OCR 서버 연동 → 번호 표시, 1920x1080 웹캠 | [unity-plate-ocr-pipeline](https://github.com/jay-7314/unity-plate-ocr-pipeline) |
 
 ## 🧭 프로젝트들이 이어지는 흐름
 
@@ -25,7 +26,7 @@ flowchart LR
     B --> C[Unity YOLO 사람 포인터<br/>카메라와 AI로 입력 교체]
     D[번호판 인식<br/>Python으로 모델 학습] --> E[사람 통과 집계<br/>탐지·추적·집계 로직]
     E --> C
-    D -. 계획 .-> F[직접 학습한 모델을<br/>Unity에서 추론]
+    D --> F[직접 학습한 번호판 모델을<br/>Unity에서 추론 + TCP로 OCR 연동]
     C -.-> F
 ```
 
@@ -134,6 +135,15 @@ while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
 | 15 | [RFID 카드 퀴즈](15-RFID-카드-퀴즈) | RFID 시리얼(자동 재연결), DOTween 카드 뒤집기 |
 | 16 | [듀얼디스플레이 국가선택](16-듀얼디스플레이-국가선택) | 듀얼 디스플레이, JSON UI 배치, 국가별 현지 시각·시차 |
 | 17 | [라이다 사람 포인터](17-라이다-사람-포인터) | LiDAR 사람 인식 → 화면 포인터 (스레드 분리, 클러스터링, 추적 유지) |
+
+**Unity 외 프로젝트 (별도 저장소)**
+
+| 분류 | 프로젝트 | 핵심 기술 |
+|---|---|---|
+| Unity와 AI | [Unity YOLO 사람 포인터](https://github.com/jay-7314/unity-yolo-person-pointer) | Unity Inference Engine, YOLOv8n ONNX, 웹캠 사람 인식 → 포인터 |
+| Unity와 AI | [Unity 번호판 인식 파이프라인](https://github.com/jay-7314/unity-plate-ocr-pipeline) | Unity 추론 + TCP + Python EasyOCR, 번호판 읽기 후처리 |
+| 컴퓨터 비전 | [자동차 번호판 인식](https://github.com/jay-7314/python_numberPlate) | YOLOv8n 학습, EasyOCR, 형식 검증·다수결 |
+| 컴퓨터 비전 | [사람 통과 인원 집계](https://github.com/jay-7314/python_TrackPeople) | YOLO 탐지·추적, 기준선 In/Out 집계 |
 
 **공통 구조** `GameManager`(싱글톤) · `JsonManager`(StreamingAssets JSON 로드) · `LoadManager`(리소스 로더) · `CoroutineData`
 
