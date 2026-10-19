@@ -3,13 +3,13 @@
 > 센서·통신·영상이 **현장에서 멈추지 않고** 돌아가게 만든 Unity(C#) 코드 모음
 > 전시/체험형 인터랙티브 콘텐츠 16건 · Unity 2022.3 · UGUI · TextMeshPro
 
-![Unity](https://img.shields.io/badge/Unity-2022.3-black?logo=unity) ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?logo=csharp) ![Kinect](https://img.shields.io/badge/Kinect-IR%20%2B%20Depth-0078D4) ![REST](https://img.shields.io/badge/REST-JSON-orange) ![TCP](https://img.shields.io/badge/TCP-Serial-green)
+![Unity](https://img.shields.io/badge/Unity-2022.3-black?logo=unity) ![C#](https://img.shields.io/badge/C%23-.NET-512BD4?logo=csharp) ![Kinect](https://img.shields.io/badge/Kinect-IR%20%2B%20Depth-0078D4) ![REST](https://img.shields.io/badge/REST-JSON-orange) ![TCP](https://img.shields.io/badge/TCP-Serial-green) ![LiDAR](https://img.shields.io/badge/LiDAR-2D%20Scan-red)
 
 **이 저장소는 코드 열람용입니다.** 영상·이미지·오디오, 서드파티 에셋(OpenCV+Unity, Kinect SDK 래퍼, DOTween 등), 내부 IP·키·기기 식별자는 제외하거나 가렸습니다. 그래서 이 저장소만으로 Unity 빌드는 되지 않습니다.
 
 ---
 
-## ✨ 대표 작업 3가지
+## ✨ 대표 작업 4가지
 
 ### 1. Kinect 적외선·깊이 카메라로 위치 추적 → [`14-키넥트-IR-추적`](14-키넥트-IR-추적/Assets/Scripts/)
 
@@ -48,6 +48,25 @@ flowchart LR
     F --> G[다운로드] --> H[화면 표시 + TCP 전송]
     D -. 429 .-> I[대기 후 재시도]
 ```
+
+### 4. LiDAR로 사람을 인식해 화면 포인터로 → [`17-라이다-사람-포인터`](17-라이다-사람-포인터/스크립트/라이다/CLidarManager.cs)
+
+2D LiDAR(YDLIDAR) 스캔으로 공간 안의 사람 위치를 찾고, 그 위치를 대형 화면의 **포인터(마우스 커서 역할)** 로 사용합니다.
+
+```mermaid
+flowchart LR
+    A[LiDAR 스캔<br/>시리얼 입력] --> B[별도 스레드에서 수신]
+    B --> C[최신 스캔 1개만 큐에 유지]
+    C --> D[메인 스레드에서<br/>좌표 변환 · 영역 필터링]
+    D --> E[포인트 클러스터링<br/>가장 큰 덩어리 = 사람]
+    E --> F[놓쳐도 20프레임 위치 유지]
+    F --> G[화면 좌표로 변환<br/>포인터 이동]
+```
+
+- 센서 수신은 백그라운드 스레드, Unity 오브젝트 접근은 메인 스레드에서만 하도록 나눴습니다.
+- 큐에 쌓인 이전 스캔은 버리고 최신 값만 써서 화면이 센서보다 늦어지지 않게 했습니다.
+- 포트와 최소·최대 감지 거리는 JSON으로 분리해 현장에서 빌드 없이 조정합니다.
+- 제조사 SDK는 제외했으며, 이 폴더에는 직접 작성한 입력 모듈만 있습니다.
 
 ---
 
