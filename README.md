@@ -137,9 +137,6 @@ while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
 
 **공통 구조** `GameManager`(싱글톤) · `JsonManager`(StreamingAssets JSON 로드) · `LoadManager`(리소스 로더) · `CoroutineData`
 
----
-
-
 
 ## 🙋 About
 
