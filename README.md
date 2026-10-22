@@ -12,7 +12,7 @@
 | 분류 | 프로젝트 | 핵심 | 보기 |
 |---|---|---|---|
 | **Unity 인터랙티브** | 17. 라이다 사람 포인터 | LiDAR 스캔으로 사람 위치를 찾아 화면 포인터로 변환 | [17-라이다-사람-포인터](17-라이다-사람-포인터) |
-| **Unity 인터랙티브** | 전시·체험 콘텐츠 17건 | Kinect·LiDAR·Arduino 센서, TCP·REST 연동, 끊겨도 멈추지 않는 구조 | 이 저장소 [01~17 폴더](#-전체-프로젝트) · [대표 작업](#-대표-작업-4가지) |
+| **Unity 인터랙티브** | 전시·체험 콘텐츠 18건 | Kinect·LiDAR·Arduino 센서, TCP·REST 연동, 끊겨도 멈추지 않는 구조 | 이 저장소 [01~18 폴더](#-전체-프로젝트) · [대표 작업](#-대표-작업-4가지) |
 | **컴퓨터 비전 (ML)** | 자동차 번호판 인식 | YOLOv8n 직접 학습(테스트 mAP50 0.871), EasyOCR, 형식 검증·다수결 | [python_numberPlate](https://github.com/jay-7314/python_numberPlate) |
 | **컴퓨터 비전 (ML)** | 사람 통과 인원 집계 | YOLO 탐지·추적, 기준선 통과 방향별 In/Out 집계 | [python_TrackPeople](https://github.com/jay-7314/python_TrackPeople) |
 | **Unity와 AI** | Unity YOLO 사람 포인터 | ONNX 모델을 Unity에서 직접 추론, 추론 6.4ms · 인식 31회/초 | [unity-yolo-person-pointer](https://github.com/jay-7314/unity-yolo-person-pointer) |
@@ -22,7 +22,7 @@
 
 ```mermaid
 flowchart LR
-    A[Unity 인터랙티브 17건<br/>센서·통신·안정성] --> B[LiDAR 사람 포인터<br/>센서로 사람 위치 입력]
+    A[Unity 인터랙티브 18건<br/>센서·통신·안정성] --> B[LiDAR 사람 포인터<br/>센서로 사람 위치 입력]
     B --> C[Unity YOLO 사람 포인터<br/>카메라와 AI로 입력 교체]
     D[번호판 인식<br/>Python으로 모델 학습] --> E[사람 통과 집계<br/>탐지·추적·집계 로직]
     E --> C
@@ -35,10 +35,10 @@ flowchart LR
 
 ---
 
-## 🎮 Unity 인터랙티브 콘텐츠 (이 저장소의 01~17 폴더)
+## 🎮 Unity 인터랙티브 콘텐츠 (이 저장소의 01~18 폴더)
 
 **이 저장소의 Unity 코드는 열람용입니다.** 영상·이미지·오디오, 서드파티 에셋(OpenCV+Unity, Kinect SDK 래퍼, DOTween 등), 내부 IP·키·기기 식별자는 제외하거나 가렸습니다. 그래서 이 저장소만으로 Unity 빌드는 되지 않습니다.
-전시/체험형 인터랙티브 콘텐츠 17건이며, 그중 영상 선택형 키오스크 5건(09~13)은 같은 템플릿 기반입니다.
+전시/체험형 인터랙티브 콘텐츠 18건이며, 그중 영상 선택형 키오스크 5건(09~13)은 같은 템플릿 기반입니다.
 
 ## ✨ 대표 작업 4가지
 
@@ -135,6 +135,7 @@ while (messageQueue.TryDequeue(out string msg)) OnArduinoMsg?.Invoke(msg);
 | 15 | [RFID 카드 퀴즈](15-RFID-카드-퀴즈) | RFID 시리얼(자동 재연결), DOTween 카드 뒤집기 |
 | 16 | [듀얼디스플레이 국가선택](16-듀얼디스플레이-국가선택) | 듀얼 디스플레이, JSON UI 배치, 국가별 현지 시각·시차 |
 | 17 | [라이다 사람 포인터](17-라이다-사람-포인터) | LiDAR 사람 인식 → 화면 포인터 (스레드 분리, 클러스터링, 추적 유지) |
+| 18 | [빌딩풍 체험 콘텐츠](18-빌드윈드) | 터치 UI 페이지 전환, 영상 재생 후 자동 이동, 3항목 선택·완료 상태 관리, 무입력 타이머 복귀, HTTP 로그 |
 
 **Unity 외 프로젝트 (별도 저장소)**
 
